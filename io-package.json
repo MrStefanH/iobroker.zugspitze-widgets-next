@@ -1,0 +1,86 @@
+{
+    "common": {
+        "name": "zugspitze-widgets-next",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Zugspitze Widgets Next",
+        "titleLang": {
+            "en": "Zugspitze Widgets Next",
+            "de": "Zugspitze Widgets Weiter",
+            "ru": "Виджеты Цугшпитце Далее",
+            "pt": "Próximo Widgets do Zugspitze",
+            "nl": "Zugspitze-widgets Volgende",
+            "fr": "Widgets de la Zugspitze Suivant",
+            "it": "Widget dello Zugspitze Avanti",
+            "es": "Widgets de Zugspitze Siguiente",
+            "pl": "Widżety Zugspitze Dalej",
+            "uk": "Віджети Zugspitze Далі",
+            "zh-cn": "楚格峰小部件下一个"
+        },
+        "desc": {
+            "en": "Just some personal VIS2 widgets",
+            "de": "Nur ein paar persönliche VIS2-Widgets",
+            "ru": "Просто несколько личных виджетов VIS2",
+            "pt": "Apenas alguns widgets pessoais do VIS2",
+            "nl": "Zomaar wat persoonlijke VIS2-widgets",
+            "fr": "Juste quelques widgets VIS2 personnels",
+            "it": "Solo alcuni widget VIS2 personali",
+            "es": "Sólo algunos widgets personales de VIS2",
+            "pl": "Tylko kilka osobistych widżetów VIS2",
+            "uk": "Просто деякі персональні віджети VIS2",
+            "zh-cn": "只是一些个人 VIS2 小部件"
+        },
+        "authors": [
+            "Stefan Pfaffe <pfaffe.st@gmail.com>"
+        ],
+        "keywords": [
+            "vis2",
+            "widgets"
+        ],
+        "license": "MIT",
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "zugspitze-widgets-next.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/MrStefanH/ioBroker.zugspitze-widgets-next/main/admin/zugspitze-widgets-next.png",
+        "readme": "https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "restartAdapters": [
+            "vis"
+        ],
+        "onlyWWW": true,
+        "noConfig": true,
+        "singleton": true,
+        "type": "visualization-widgets",
+        "mode": "once",
+        "dependencies": [
+            "vis"
+        ],
+        "globalDependencies": []
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}

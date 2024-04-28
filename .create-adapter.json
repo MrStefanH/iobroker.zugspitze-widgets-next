@@ -1,0 +1,29 @@
+{
+    "cli": true,
+    "target": "directory",
+    "adapterName": "zugspitze-widgets-next",
+    "title": "Zugspitze Widgets Next",
+    "description": "Just some personal VIS2 widgets",
+    "keywords": [
+        "vis2",
+        "widgets"
+    ],
+    "contributors": [
+        "Stefan Pfaffe"
+    ],
+    "expert": "yes",
+    "features": [
+        "vis"
+    ],
+    "type": "visualization-widgets",
+    "releaseScript": "yes",
+    "authorName": "Stefan Pfaffe",
+    "authorGithub": "MrStefanH",
+    "authorEmail": "pfaffe.st@gmail.com",
+    "gitRemoteProtocol": "SSH",
+    "gitCommit": "yes",
+    "defaultBranch": "main",
+    "license": "MIT License",
+    "dependabot": "yes",
+    "creatorVersion": "2.6.3"
+}

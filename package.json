@@ -1,0 +1,54 @@
+{
+  "name": "iobroker.zugspitze-widgets-next",
+  "version": "0.0.1",
+  "description": "Just some personal VIS2 widgets",
+  "author": {
+    "name": "Stefan Pfaffe",
+    "email": "pfaffe.st@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Stefan Pfaffe"
+    }
+  ],
+  "homepage": "https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next",
+  "license": "MIT",
+  "keywords": [
+    "vis2",
+    "widgets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MrStefanH/ioBroker.zugspitze-widgets-next.git"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@alcalzone/release-script": "^3.7.0",
+    "@alcalzone/release-script-plugin-iobroker": "^3.7.0",
+    "@alcalzone/release-script-plugin-license": "^3.7.0",
+    "@alcalzone/release-script-plugin-manual-review": "^3.7.0",
+    "@iobroker/adapter-dev": "^1.3.0",
+    "@iobroker/testing": "^4.1.3"
+  },
+  "main": "widgets/zugspitze-widgets-next.html",
+  "files": [
+    "widgets/**/!(tsconfig|tsconfig.*|.eslintrc).json",
+    "widgets/**/*.{html,css,png,svg,jpg,js}",
+    "www/",
+    "io-package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test:package": "mocha test/package --exit",
+    "test": "npm run test:package",
+    "translate": "translate-adapter",
+    "release": "release-script"
+  },
+  "bugs": {
+    "url": "https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next/issues"
+  },
+  "readmeFilename": "README.md"
+}
