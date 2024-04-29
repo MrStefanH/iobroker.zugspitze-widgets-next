@@ -1,5 +1,13 @@
 version: 2
 updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "04:00"
+      timezone: Europe/Berlin
+
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -7,16 +15,13 @@ updates:
       time: "04:00"
       timezone: Europe/Berlin
     open-pull-requests-limit: 5
-    assignees:
-      - MrStefanH
     versioning-strategy: increase
 
-  - package-ecosystem: github-actions
-    directory: "/"
+  - package-ecosystem: npm
+    directory: "/src-widgets"
     schedule:
       interval: monthly
       time: "04:00"
       timezone: Europe/Berlin
     open-pull-requests-limit: 5
-    assignees:
-      - MrStefanH
+    versioning-strategy: increase

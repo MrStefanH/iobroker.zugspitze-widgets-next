@@ -1,98 +1,50 @@
-![Logo](admin/zugspitze-widgets-next.png)
-# ioBroker.zugspitze-widgets-next
+![Logo](admin/vis-2-widgets-react-template.png)
+# Vis 2 Energy widgets
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.zugspitze-widgets-next.svg)](https://www.npmjs.com/package/iobroker.zugspitze-widgets-next)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.zugspitze-widgets-next.svg)](https://www.npmjs.com/package/iobroker.zugspitze-widgets-next)
-![Number of Installations](https://iobroker.live/badges/zugspitze-widgets-next-installed.svg)
-![Current version in stable repository](https://iobroker.live/badges/zugspitze-widgets-next-stable.svg)
+This is only for development purposes, and it could be used as a basis for own vis-2 widgets' development.
 
-[![NPM](https://nodei.co/npm/iobroker.zugspitze-widgets-next.png?downloads=true)](https://nodei.co/npm/iobroker.zugspitze-widgets-next/)
+## Development
+After all entries with `vis-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json` 
+and file `admin/vis-widgets-react-template.png` renamed too, you can start with renaming of widgets.
 
-**Tests:** ![Test and Release](https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next/workflows/Test%20and%20Release/badge.svg)
+Some important places:
+1. `io-package.json` => `common.visWidgets`
+2. `src-widgets/modulefederation.config.js` from line 4
+3. File `DemoWidget.jsx`
 
-## zugspitze-widgets-next adapter for ioBroker
+Files in directory `src-widgets` (`App.jsx`, `bootstrap.jsx`, `index.jsx`) are only for development mode and will not be used in production. 
 
-Just some personal VIS2 widgets
+By development, you can start the script from `src-widgets` folder with `npm run start` command,
+and then on port 4173 you will see the demo widget.
 
-## Developer manual
-This section is intended for the developer. It can be deleted later.
+For faster development, you can:
+- start in src-widgets: `npm run start`
+- write in object `system.adapter.vis-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`
+- Press F5 in `iobroker.vis` web page
 
-### DISCLAIMER
-
-Please make sure that you consider copyrights and trademarks when you use names or logos of a company and add a disclaimer to your README.
-You can check other adapters for examples or ask in the developer community. Using a name or logo of a company without permission may cause legal problems for you.
-
-### Getting started
-
-You are almost done, only a few steps left:
-1. Create a new repository on GitHub with the name `ioBroker.zugspitze-widgets-next`
-
-1. Push all files to the GitHub repo. The creator has already set up the local repository for you:  
-    ```bash
-    git push origin main
-    ```
-1. Add a new secret under https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next/settings/secrets. It must be named `AUTO_MERGE_TOKEN` and contain a personal access token with push access to the repository, e.g. yours. You can create a new token under https://github.com/settings/tokens.
-
-1. Head over to [widgets/zugspitze-widgets-next.html](widgets/zugspitze-widgets-next.html) and start programming!
-
-### Best Practices
-We've collected some [best practices](https://github.com/ioBroker/ioBroker.repositories#development-and-coding-best-practices) regarding ioBroker development and coding in general. If you're new to ioBroker or Node.js, you should
-check them out. If you're already experienced, you should also take a look at them - you might learn something new :)
-
-### Scripts in `package.json`
-Several npm scripts are predefined for your convenience. You can run them using `npm run <scriptname>`
-| Script name | Description |
-|-------------|-------------|
-| `test:package` | Ensures your `package.json` and `io-package.json` are valid. |
-| `test` | Performs a minimal test run on package files. |
-| `translate` | Translates texts in your adapter to all required languages, see [`@iobroker/adapter-dev`](https://github.com/ioBroker/adapter-dev#manage-translations) for more details. |
-| `release` | Creates a new release, see [`@alcalzone/release-script`](https://github.com/AlCalzone/release-script#usage) for more details. |
-
-### Publishing the widget
-Using GitHub Actions, you can enable automatic releases on npm whenever you push a new git tag that matches the form 
-`v<major>.<minor>.<patch>`. We **strongly recommend** that you do. The necessary steps are described in `.github/workflows/test-and-release.yml`.
-
-Since you installed the release script, you can create a new
-release simply by calling:
-```bash
-npm run release
-```
-Additional command line options for the release script are explained in the
-[release-script documentation](https://github.com/AlCalzone/release-script#command-line).
-
-To get your widget released in ioBroker, please refer to the documentation 
-of [ioBroker.repositories](https://github.com/ioBroker/ioBroker.repositories#requirements-for-adapter-to-get-added-to-the-latest-repository).
-
-### Test the adapter manually on a local ioBroker installation
-In order to install the adapter locally without publishing, the following steps are recommended:
-1. Create a tarball from your dev directory:  
-    ```bash
-    npm pack
-    ```
-1. Upload the resulting file to your ioBroker host
-1. Install it locally (The paths are different on Windows):
-    ```bash
-    cd /opt/iobroker
-    npm i /path/to/tarball.tgz
-    ```
-
-For later updates, the above procedure is not necessary. Just do the following:
-1. Overwrite the changed files in the adapter directory (`/opt/iobroker/node_modules/iobroker.zugspitze-widgets-next`)
-1. Execute `iobroker upload zugspitze-widgets-next` on the ioBroker host
-
-## Changelog
 <!--
-    Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+## Changelog
+### 0.2.1 (2023-07-30)
+* (bluefox) update packages
 
-### **WORK IN PROGRESS**
-* (Stefan Pfaffe) initial release
+### 0.2.0 (2023-05-18)
+* (bluefox) Added CI tests
+
+### 0.1.6 (2023-03-09)
+* (bluefox) update packages
+
+### 0.1.2 (2023-02-27)
+* (bluefox) Packages were updated
+
+### 0.1.1 (2022-09-07)
+* (bluefox) Initial commit
 
 ## License
-MIT License
+The MIT License (MIT)
 
-Copyright (c) 2024 Stefan Pfaffe <pfaffe.st@gmail.com>
+Copyright (c) 2022-2023 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -101,13 +53,13 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
