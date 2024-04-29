@@ -45,7 +45,8 @@
     "test:package": "mocha test/package --exit",
     "test": "npm run test:package",
     "translate": "translate-adapter",
-    "release": "release-script"
+    "release": "release-script",
+    "dev-server": "dev-server run"
   },
   "bugs": {
     "url": "https://github.com/MrStefanH/ioBroker.zugspitze-widgets-next/issues"
