@@ -1,15 +1,18 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
 
-class DemoWidget extends (window.visRxWidget || VisRxWidget) {
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+class Zugspitze extends (window.visRxWidget || VisRxWidget) {
     static getWidgetInfo() {
         return {
-            id: 'tplZugspitzeDemoWidget',
+            id: 'tplZugspitzeMainWidget',
             visSet: 'vis-2-widgets-zugspitze',
             visSetLabel: 'vis_2_widgets_set_zugspitze',
-            visWidgetLabel: 'vis_2_widgets_zugspitze_widget_demo',
+            visWidgetLabel: 'vis_2_widgets_zugspitze_widget_main',
             visSetColor: 'red',
-            visName: 'ZugspitzeDemoWidget',
+            visName: 'ZugspitzeMainWidget',
             visAttrs: [],
             visPrev: 'widgets/zugspitze-widgets-next/img/vis-widget-demo.png',
         };
@@ -36,7 +39,7 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
     // Do not delete this method. It is used by vis to read the widget configuration.
     // eslint-disable-next-line class-methods-use-this
     getWidgetInfo() {
-        return DemoWidget.getWidgetInfo();
+        return Zugspitze.getWidgetInfo();
     }
 
     // This function is called every time when rxData is changed
@@ -59,8 +62,20 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
     renderWidgetBody(props) {
         super.renderWidgetBody(props);
 
-        return <h1>Hello World</h1>;
+        return (
+            <>
+              <Button variant="primary">Primary</Button>{' '}
+              <Button variant="secondary">Secondary</Button>{' '}
+              <Button variant="success">Success</Button>{' '}
+              <Button variant="warning">Warning</Button>{' '}
+              <Button variant="danger">Danger</Button>{' '}
+              <Button variant="info">Info</Button>{' '}
+              <Button variant="light">Light</Button>{' '}
+              <Button variant="dark">Dark</Button>
+              <Button variant="link">Link</Button>
+            </>
+        );
     }
 }
 
-export default DemoWidget;
+export default Zugspitze;

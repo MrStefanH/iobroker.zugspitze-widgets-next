@@ -70,12 +70,13 @@
     "connectionType": "cloud",
     "dataSource": "poll",
     "visWidgets": {
-      "vis2DemoWidget": {
+      "vis2Zugspitze": {
         "i18n": "component",
-        "name": "vis2DemoWidget",
+        "name": "vis2Zugspitze",
         "url": "zugspitze-widgets-next/customWidgets.js",
         "components": [
-          "DemoWidget"
+          "DemoWidget",
+          "Zugspitze"
         ]
       }
     },
