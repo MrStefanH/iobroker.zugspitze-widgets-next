@@ -1,9 +1,9 @@
 ![Logo](admin/zugspitze-widgets-next.png)
 # Zugspitze Widgets Next
 
-### **WORK IN PROGRESS**
-
 ## Changelog
+
+### **WORK IN PROGRESS**
 
 ## License
 The MIT License (MIT)
