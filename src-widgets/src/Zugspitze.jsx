@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -64,6 +65,9 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
 
         return (
             <div id="wrapper">
+                <Navbar fixed="top" className='border-bottom'>
+                    <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Trainboard</Navbar.Brand>
+                </Navbar>
             </div>
         );
     }
