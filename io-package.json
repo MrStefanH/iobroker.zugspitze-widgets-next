@@ -75,7 +75,6 @@
         "name": "vis2Zugspitze",
         "url": "zugspitze-widgets-next/customWidgets.js",
         "components": [
-          "DemoWidget",
           "Zugspitze"
         ]
       }
