@@ -4,10 +4,6 @@
 ## Changelog
 
 ### **WORK IN PROGRESS**
-
-### 0.0.2
-
-### 0.0.1 (2024-03-30)
 * (MrStefanH) Init
 
 ## License
