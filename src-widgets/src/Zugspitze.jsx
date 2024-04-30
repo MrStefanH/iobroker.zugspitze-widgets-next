@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -67,6 +69,15 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
             <div id="wrapper">
                 <Navbar fixed="top" className='border-bottom'>
                     <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Trainboard</Navbar.Brand>
+                    <div className='ml-auto'>
+                        <Nav className='navbar-icons'>
+                            <Nav.Item>
+                                <Nav.Link as="button" title='Notfications' className='btn btn-link'>
+                                    <NotificationsIcon />
+                                </Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </div>
                 </Navbar>
             </div>
         );
