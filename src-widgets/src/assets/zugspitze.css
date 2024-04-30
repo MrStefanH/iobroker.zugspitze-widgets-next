@@ -18,6 +18,10 @@
     color: rgba(83, 99, 115, .5);
 }
 
+.navbar-icons .nav-link:hover {
+    color: #536373;
+}
+
 .ml-auto, .mx-auto {
     margin-left: auto !important;
 }
