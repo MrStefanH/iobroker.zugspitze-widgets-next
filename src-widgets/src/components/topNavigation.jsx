@@ -26,7 +26,7 @@ function TopNavigation(props) {
                     <SettingsIcon />
                 </Nav.Link>
             </Nav.Item>
-            <Nav.Item onClick={() => props.socket.emit('logout')}>
+            <Nav.Item>
                 <Nav.Link as="a">
                     <LogoutIcon />
                 </Nav.Link>
