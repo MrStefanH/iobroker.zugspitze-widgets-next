@@ -20,6 +20,14 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
         };
     }
 
+    constructor(props) {
+        super(props);
+        this.state.hasNotifications = false;
+        this.props.context.socket.subscribeState(['0_userdata.0.hasNotifications'], (id, state) => {
+            this.setState({hasNotifications: state.val});
+        });
+    }
+
     // eslint-disable-next-line class-methods-use-this
     propertiesUpdate() {
         // Widget has 3 important states
@@ -68,7 +76,7 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
             <div id="wrapper">
                 <Navbar fixed="top" className='border-bottom'>
                     <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Trainboard</Navbar.Brand>
-                    <TopNavigation />
+                    <TopNavigation hasNotifications={this.state.hasNotifications}/>
                 </Navbar>
             </div>
         );
