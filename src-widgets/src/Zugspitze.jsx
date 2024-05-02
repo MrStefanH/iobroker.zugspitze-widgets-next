@@ -22,6 +22,7 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
 
     constructor(props) {
         super(props);
+        console.log(this);
         this.state.hasNotifications = false;
         this.props.context.socket.subscribeState(['0_userdata.0.hasNotifications'], (id, state) => {
             this.setState({hasNotifications: state.val});
@@ -76,7 +77,10 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
             <div id="wrapper">
                 <Navbar fixed="top" className='border-bottom'>
                     <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Trainboard</Navbar.Brand>
-                    <TopNavigation hasNotifications={this.state.hasNotifications}/>
+                    <TopNavigation hasNotifications={this.state.hasNotifications} socket={this.props.context.socket} />
+                </Navbar>
+                <Navbar fixed="bottom">
+                    <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Footer</Navbar.Brand>
                 </Navbar>
             </div>
         );
