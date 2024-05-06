@@ -1,7 +1,12 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import TopNavigation from './components/topNavigation';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Ratio from 'react-bootstrap/Ratio';
+import TopNavigation from './components/topNavigation';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/zugspitze.css';
@@ -22,10 +27,10 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
 
     constructor(props) {
         super(props);
-        console.log(this);
+
         this.state.hasNotifications = false;
-        this.props.context.socket.subscribeState(['0_userdata.0.hasNotifications'], (id, state) => {
-            this.setState({hasNotifications: state.val});
+        this.props.socket.subscribeState(['0_userdata.0.hasNotifications'], (id, state) => {
+            this.setState({ hasNotifications: state?.val ?? false });
         });
     }
 
@@ -75,12 +80,25 @@ class Zugspitze extends (window.visRxWidget || VisRxWidget) {
 
         return (
             <div id="wrapper">
-                <Navbar fixed="top" className='border-bottom'>
-                    <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Trainboard</Navbar.Brand>
+                <Navbar fixed="top" className="border-bottom">
+                    <Navbar.Brand href="#" className="pt-0 px-lg-3 px-1 mr-0">Trainboard</Navbar.Brand>
                     <TopNavigation hasNotifications={this.state.hasNotifications} />
                 </Navbar>
+                <Container fluid>
+                    <Row>
+                        <Col>
+                            <Card>
+                                <Card.Body>
+                                    <Col>
+                                        <Ratio className="house-bg" aspectRatio={6 / 8}><h1>Test</h1></Ratio>
+                                    </Col>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                </Container>
                 <Navbar fixed="bottom">
-                    <Navbar.Brand href="#" className='pt-0 px-lg-3 px-1 mr-0'>Footer</Navbar.Brand>
+                    <Navbar.Brand href="#" className="pt-0 px-lg-3 px-1 mr-0">Footer</Navbar.Brand>
                 </Navbar>
             </div>
         );

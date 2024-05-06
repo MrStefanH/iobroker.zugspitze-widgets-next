@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Modal from 'react-bootstrap/Modal';
 import Badge from '@mui/material/Badge';
@@ -9,12 +9,12 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 function TopNavigation(props) {
     const [showNotificationsModal, setShowNotificationsModal] = useState(false);
-    const [fullscreen, setFullscreen] = useState(true);
+    const [fullscreen] = useState(true);
 
-    return <div className='ml-auto'>
-        <Nav className='navbar-icons'>
+    return <div className="ml-auto">
+        <Nav className="navbar-icons">
             <Nav.Item onClick={() => setShowNotificationsModal(!showNotificationsModal)}>
-                <Nav.Link as="button" title='Notfications' className='btn btn-link'>
+                <Nav.Link as="button" title="Notfications" className="btn btn-link">
                     {props.hasNotifications && <Badge max={999} badgeContent={4} color="primary" overlap="circular">
                         <NotificationsIcon />
                     </Badge>}
