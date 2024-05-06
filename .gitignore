@@ -8,3 +8,5 @@ widgets
 
 # ioBroker dev-server
 .dev-server/
+
+.DS_Store
