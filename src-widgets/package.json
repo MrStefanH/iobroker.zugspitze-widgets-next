@@ -10,7 +10,7 @@
         "@iobroker/adapter-react-v5": "^4.10.1",
         "@iobroker/vis-2-widgets-react-dev": "^1.0.5",
         "@jaames/iro": "^5.5.2",
-        "@mui/icons-material": "^5.15.12",
+        "@mui/icons-material": "^5.15.19",
         "@mui/material": "5.14.14",
         "@mui/styles": "5.14.14",
         "@mui/x-date-pickers": "^6.19.0",
