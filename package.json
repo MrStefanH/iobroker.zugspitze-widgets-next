@@ -32,7 +32,7 @@
     "@alcalzone/release-script-plugin-license": "^3.7.0",
     "@iobroker/dev-server": "^0.7.2",
     "@iobroker/vis-2-widgets-react-dev": "^1.0.5",
-    "@iobroker/vis-2-widgets-testing": "^1.0.0",
+    "@iobroker/vis-2-widgets-testing": "^1.0.4",
     "@types/gulp": "^4.0.17",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.24",
