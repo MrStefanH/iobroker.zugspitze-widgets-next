@@ -34,11 +34,11 @@
     "@iobroker/vis-2-widgets-react-dev": "^1.0.5",
     "@iobroker/vis-2-widgets-testing": "^1.0.0",
     "@types/gulp": "^4.0.17",
-    "@types/mocha": "^10.0.6",
+    "@types/mocha": "^10.0.7",
     "@types/node": "^20.11.24",
     "eslint": "^8.57.0",
     "gulp": "^4.0.2",
-    "mocha": "^10.3.0",
+    "mocha": "^10.5.2",
     "typescript": "^5.3.3"
   },
   "main": "widgets/zugspitze-widgets-next/customWidgets.js",
